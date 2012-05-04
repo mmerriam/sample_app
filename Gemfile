@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # USE THIS WHEN REPLACING SQLITE WITH POSTGRESQL (also delete lines indicated below):
 # gem 'pg', '0.12.2'
