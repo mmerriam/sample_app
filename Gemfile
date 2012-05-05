@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-source 'https://rubygems.org'
-
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
@@ -34,6 +32,7 @@ group :test do
   gem 'growl', '1.0.3'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '1.4.0'
 end 
 
 # DELETE THIS WHEN REPLACING SQLITE WITH POSTGRESQL:
