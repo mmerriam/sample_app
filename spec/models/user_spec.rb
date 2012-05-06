@@ -21,6 +21,7 @@ describe User do
 
   subject { @user }
 
+  it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:name) }
   it { should respond_to(:email) }
@@ -28,8 +29,16 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }
-  it { should be_valid }
 
+  it { should be_valid }
+  it { should_not be_admin }
+
+  describe "with admin attribute set to 'true'" do
+    before { @user.toggle!(:admin) }
+
+    it { should be_admin }
+  end
+  
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
